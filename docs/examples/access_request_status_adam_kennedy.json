@@ -21,7 +21,10 @@
       "current_phase": "APPROVAL_PHASE",
       "requester_comment": "Hack day demo request",
       "created": "2026-10-05T18:38:59.494000+00:00",
-      "modified": "2026-10-05T18:39:01.415000+00:00"
+      "modified": "2026-10-05T18:39:01.415000+00:00",
+      "waiting_on": [
+        "philip.ellis"
+      ]
     },
     {
       "request_id": "ee71286507b74209a7d67edd94b6ab58",

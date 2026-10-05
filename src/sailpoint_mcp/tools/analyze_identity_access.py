@@ -228,7 +228,7 @@ def summarize(rows: list[dict[str, Any]]) -> dict[str, Any]:
         by_type[kind] = by_type.get(kind, 0) + 1
         if kind == "ACCOUNT":
             continue
-        source = row.get("source") or "(no source)"
+        source = row.get("source") or ("Roles" if kind == "ROLE" else "(no source)")
         bucket = by_source.setdefault(source, {"count": 0, "items": []})
         bucket["count"] += 1
         label = row["name"]

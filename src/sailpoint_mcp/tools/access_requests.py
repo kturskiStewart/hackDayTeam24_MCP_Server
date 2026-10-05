@@ -146,6 +146,45 @@ def summarize_request(item: dict[str, Any]) -> dict[str, Any]:
     return {key: value for key, value in summary.items() if value not in (None, [], "")}
 
 
+def pending_approvers(request_ids: list[str]) -> dict[str, list[str]]:
+    """Who each pending request is waiting on, straight from the approvals API.
+
+    The request-status record only names an approver for single-person schemes.
+    For "all owners" or group approval it has no name at all, while the approval
+    itself always carries the real owner -- so ask it. Needs an org-admin PAT to
+    see other people's approvals.
+    """
+    if not request_ids:
+        return {}
+    quoted = ",".join(f'"{i}"' for i in request_ids)
+    approvals = call_sailpoint(
+        lambda client: AccessRequestApprovalsApi(client).list_pending_approvals_v1(
+            filters=f"accessRequestId in ({quoted})", limit=MAX_LIMIT
+        )
+    )
+    found: dict[str, list[str]] = {}
+    for approval in approvals or []:
+        owner = approval.owner.name if approval.owner else None
+        if approval.access_request_id and owner:
+            found.setdefault(approval.access_request_id, []).append(owner)
+    return {key: sorted(set(names)) for key, names in found.items()}
+
+
+def add_pending_approvers(requests: list[dict[str, Any]]) -> None:
+    """Fill `waiting_on` for pending requests, in place. Never raises: the
+    caller's answer is still useful without names, so a failed lookup is logged."""
+    pending = [r for r in requests if r.get("status") == "pending_approval"]
+    try:
+        approvers = pending_approvers([r["request_id"] for r in pending if r.get("request_id")])
+    except Exception as exc:
+        log.warning("could not look up pending approvers: %s", exc)
+        return
+    for request in pending:
+        names = approvers.get(request.get("request_id"))
+        if names:
+            request["waiting_on"] = sorted(set(request.get("waiting_on", [])) | set(names))
+
+
 def _reviewer_name(item: dict[str, Any]) -> str | None:
     """Who decided a completed approval.
 
@@ -240,6 +279,7 @@ def register(mcp: MCPServer) -> None:
             return {"error": describe_api_error(exc)}
 
         requests = [summarize_request(item.to_dict()) for item in items or []]
+        add_pending_approvers(requests)
         if status:
             requests = [r for r in requests if r.get("status") == status]
 

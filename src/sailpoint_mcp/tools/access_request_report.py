@@ -21,10 +21,17 @@ from pathlib import Path
 from typing import Any
 
 from mcp.server import MCPServer
-from sailpoint import AccessRequestApprovalsApi, AccessRequestsApi
+from sailpoint import AccessRequestsApi
 
 from ..client import call_sailpoint, describe_api_error
-from .access_requests import DEFAULT_DAYS, MAX_DAYS, MAX_LIMIT, _since, summarize_request
+from .access_requests import (
+    DEFAULT_DAYS,
+    MAX_DAYS,
+    MAX_LIMIT,
+    _since,
+    add_pending_approvers,
+    summarize_request,
+)
 
 log = logging.getLogger(__name__)
 
@@ -106,31 +113,6 @@ def _standing(request: dict[str, Any]) -> tuple[str, str]:
     if status == "cancelled":
         return "Cancelled", "This request was cancelled."
     return "Unknown", "Status could not be determined."
-
-
-def pending_approvers(request_ids: list[str]) -> dict[str, list[str]]:
-    """Who each pending request is waiting on, straight from the approvals API.
-
-    The request-status record only names an approver for single-person schemes.
-    For "all owners" or group approval it has no name at all, while the approval
-    itself always carries the real owner -- so ask it. Needs an org-admin PAT to
-    see other people's approvals; on failure the caller falls back to the
-    status record.
-    """
-    if not request_ids:
-        return {}
-    quoted = ",".join(f'"{i}"' for i in request_ids)
-    approvals = call_sailpoint(
-        lambda client: AccessRequestApprovalsApi(client).list_pending_approvals_v1(
-            filters=f"accessRequestId in ({quoted})", limit=MAX_LIMIT
-        )
-    )
-    found: dict[str, list[str]] = {}
-    for approval in approvals or []:
-        owner = approval.owner.name if approval.owner else None
-        if approval.access_request_id and owner:
-            found.setdefault(approval.access_request_id, []).append(owner)
-    return {key: sorted(set(names)) for key, names in found.items()}
 
 
 def build_report_rows(
@@ -272,16 +254,7 @@ def register(mcp: MCPServer) -> None:
         items = items or []
         requests = [summarize_request(item.to_dict()) for item in items]
 
-        pending = [r for r in requests if r.get("status") == "pending_approval"]
-        try:
-            approvers = pending_approvers([r["request_id"] for r in pending if r.get("request_id")])
-        except Exception as exc:  # the report is still useful without names
-            log.warning("could not look up pending approvers: %s", exc)
-            approvers = {}
-        for request in pending:
-            names = approvers.get(request.get("request_id"))
-            if names:
-                request["waiting_on"] = sorted(set(request.get("waiting_on", [])) | set(names))
+        add_pending_approvers(requests)
 
         person = next((r["requested_for"] for r in requests if r.get("requested_for")), identity_id)
         rows = build_report_rows(requests)
