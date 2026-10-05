@@ -1,0 +1,57 @@
+{
+  "identity_id": "dc67bc7d4e464b9ea41ed8c347a5d668",
+  "direction": "either",
+  "days": 30,
+  "returned": 3,
+  "counts_by_status": {
+    "pending_approval": 1,
+    "completed": 2
+  },
+  "requests": [
+    {
+      "request_id": "2eb35488e80440d5bb367d25a7ed00af",
+      "item": "HACK DAY - Ultimate Universe Destroyer Beholder Role",
+      "item_type": "ROLE",
+      "request_type": "GRANT_ACCESS",
+      "status": "pending_approval",
+      "state": "EXECUTING",
+      "requested_for": "Adam.Kennedy",
+      "requested_by": "hack.day",
+      "description": "DO NOT approve any requests for this role. Anyone with membership in this role will become a Beholder. An eraser of universes, absolute abomination and a great horror. Potentially breaking some stuff in the tenant too.",
+      "current_phase": "APPROVAL_PHASE",
+      "requester_comment": "Hack day demo request",
+      "created": "2026-10-05T18:38:59.494000+00:00",
+      "modified": "2026-10-05T18:39:01.415000+00:00"
+    },
+    {
+      "request_id": "ee71286507b74209a7d67edd94b6ab58",
+      "item": "HACK DAY - Role with Approver",
+      "item_type": "ROLE",
+      "request_type": "GRANT_ACCESS",
+      "status": "completed",
+      "state": "REQUEST_COMPLETED",
+      "requested_for": "Adam.Kennedy",
+      "requested_by": "hack.day",
+      "approved_by": [
+        "hack.day"
+      ],
+      "requester_comment": "Hack day test: pending approval path for get_approvals",
+      "created": "2026-10-05T18:08:39.561000+00:00",
+      "modified": "2026-10-05T18:44:08.357000+00:00"
+    },
+    {
+      "request_id": "f6e7d9a417dc46389101e1ce34fb6bf7",
+      "item": "ERP Report Admin - PRISM",
+      "item_type": "ACCESS_PROFILE",
+      "request_type": "GRANT_ACCESS",
+      "status": "completed",
+      "state": "REQUEST_COMPLETED",
+      "requested_for": "Adam.Kennedy",
+      "requested_by": "hack.day",
+      "description": "Grants report administrator access to the PRISM ERP system.",
+      "requester_comment": "Hack day test request for the access request status tool",
+      "created": "2026-10-05T17:56:38.381000+00:00",
+      "modified": "2026-10-05T17:58:06.440000+00:00"
+    }
+  ]
+}

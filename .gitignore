@@ -10,3 +10,5 @@ build/
 .pytest_cache/
 .DS_Store
 mcp-inspector.json
+.mcp.json
+output/

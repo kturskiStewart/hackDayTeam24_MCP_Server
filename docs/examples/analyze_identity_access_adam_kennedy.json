@@ -1,0 +1,56 @@
+{
+  "identity": {
+    "id": "dc67bc7d4e464b9ea41ed8c347a5d668",
+    "name": "Adam.Kennedy",
+    "email": "Adam.Kennedy@sailpointdemo.com",
+    "job_title": "Payroll Analyst II",
+    "department": "Accounting",
+    "manager": "Douglas.Flores",
+    "lifecycle_state": "active"
+  },
+  "row_count": 19,
+  "digest": {
+    "counts_by_type": {
+      "ENTITLEMENT": 10,
+      "ROLE": 1,
+      "ACCESS_PROFILE": 4,
+      "ACCOUNT": 4
+    },
+    "by_source": {
+      "PRISM": {
+        "count": 9,
+        "items": [
+          "[ENTITLEMENT] Contract_Employee -- Access to external-use systems",
+          "[ENTITLEMENT] Internal_Employee -- Access to internal-use-only systems",
+          "[ENTITLEMENT] Create_Reports -- View, Modify and Create Accounting report runs",
+          "[ENTITLEMENT] User -- This group is used to assign basic user access to PRISM",
+          "[ENTITLEMENT] View_Reports -- View-only access to all existing Accounting report data",
+          "[ENTITLEMENT] Modify_Reports -- View and Modify existing Accounting report runs",
+          "[ACCESS_PROFILE] ERP Employee Access - PRISM -- Grants user access to the PRISM ERP system",
+          "[ACCESS_PROFILE] ERP Report Admin - PRISM -- Grants report administrator access to the PRISM ERP system.",
+          "[ACCESS_PROFILE] ERP User Access - PRISM -- Grants user access to the PRISM ERP system"
+        ]
+      },
+      "Active Directory": {
+        "count": 5,
+        "items": [
+          "[ENTITLEMENT] InvntryAnalysis -- Inventory Analysis",
+          "[ENTITLEMENT] campusAccess -- Controls physical badge access to company HQ buildings",
+          "[ENTITLEMENT] Employees -- Employees",
+          "[ENTITLEMENT] All_Users -- All Users in Employee Active Directory",
+          "[ACCESS_PROFILE] Employee Base Account - AD -- Base Active Directory account for all active employees"
+        ]
+      },
+      "(no source)": {
+        "count": 1,
+        "items": [
+          "[ROLE] HACK DAY - Role with Approver"
+        ]
+      }
+    },
+    "privileged": [],
+    "direct_entitlements": 3,
+    "entitlements_via_bundles": 7
+  },
+  "notes": []
+}

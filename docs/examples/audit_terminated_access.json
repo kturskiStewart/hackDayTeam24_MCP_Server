@@ -1,0 +1,112 @@
+{
+  "lifecycle_state": "inactive",
+  "terminated_identities": 9,
+  "with_enabled_accounts": 9,
+  "enabled_accounts": 27,
+  "by_risk": {
+    "High": 0,
+    "Medium": 9,
+    "Low": 0
+  },
+  "identities": [
+    {
+      "identity": "Crystal.Schmidt",
+      "job_title": "Receiving Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "HR (0 groups)",
+        "Active Directory (5 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Denise.Hunt",
+      "job_title": "Treasury Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "HR (0 groups)",
+        "Active Directory (3 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Jessica.Sanchez",
+      "job_title": "Cost Savings Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (5 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Judith.Tucker",
+      "job_title": "Procurement Buyer",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "HR (0 groups)",
+        "Active Directory (4 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Kathleen.Watson",
+      "job_title": "Financial Planning Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (4 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Rosa.Garza",
+      "job_title": "Financial Systems Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (3 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Sandra.Lopez",
+      "job_title": "Staging Test Engineer I",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (6 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Teresa.Cole",
+      "job_title": "Staging Test Engineer I",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (4 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    },
+    {
+      "identity": "Tina.Ruiz",
+      "job_title": "QA Analyst",
+      "risk": "Medium",
+      "enabled_accounts": [
+        "Active Directory (4 groups)",
+        "HR (0 groups)",
+        "IdentityNow (0 groups)"
+      ],
+      "privileged_access": []
+    }
+  ]
+}

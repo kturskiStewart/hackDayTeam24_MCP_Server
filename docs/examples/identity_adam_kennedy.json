@@ -1,0 +1,26 @@
+{
+  "id": "dc67bc7d4e464b9ea41ed8c347a5d668",
+  "name": "Adam.Kennedy",
+  "username": "Adam.Kennedy",
+  "email": "Adam.Kennedy@sailpointdemo.com",
+  "job_title": "Payroll Analyst II",
+  "department": "Accounting",
+  "manager": "Douglas.Flores",
+  "lifecycle_state": "active",
+  "is_manager": false,
+  "inactive": false,
+  "authoritative_source": "HR",
+  "account_sources": [
+    "Active Directory",
+    "HR",
+    "IdentityNow",
+    "PRISM"
+  ],
+  "access_counts": {
+    "total_access": 15,
+    "entitlements": 10,
+    "roles": 1,
+    "access_profiles": 4
+  },
+  "created": "2026-09-21T13:07:50.834Z"
+}

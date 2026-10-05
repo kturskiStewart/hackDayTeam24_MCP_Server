@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "id": "a3d26967fab94e63b6637358bc54877b",
+    "name": "Janet.Washington",
+    "email": "Janet.Washington@sailpointdemo.com",
+    "job_title": "Payroll Manager",
+    "department": "Accounting",
+    "manager": "Amanda.Ross",
+    "lifecycle_state": "active"
+  },
+  "row_count": 26,
+  "digest": {
+    "counts_by_type": {
+      "ENTITLEMENT": 17,
+      "ACCESS_PROFILE": 5,
+      "ACCOUNT": 4
+    },
+    "by_source": {
+      "Active Directory": {
+        "count": 13,
+        "items": [
+          "[ENTITLEMENT] PayrollProjects -- Payroll Projects Base-level Access",
+          "[ENTITLEMENT] FinanceUsers -- Grants basic financial access to the internal Financial System",
+          "[ENTITLEMENT] InternalAudit -- Internal Audit Accounting Systems Access",
+          "[ENTITLEMENT] AI_Payment_Members -- Security group containing all AI Payment application members.",
+          "[ENTITLEMENT] PayrollControls -- Payroll Controls Base-level Access",
+          "[ENTITLEMENT] PayrollAnalysis -- Grants abilities to view payroll analytics and trends",
+          "[ENTITLEMENT] WindowsAdministration -- Windows Administration System-Wide Accessve Directory",
+          "[ENTITLEMENT] campusAccess -- Controls physical badge access to company HQ buildings",
+          "[ENTITLEMENT] PayrollManager -- Grants access to employee management tools for Payroll department and web access to Payroll Training and Compliance database",
+          "[ENTITLEMENT] Employees -- Employees",
+          "[ENTITLEMENT] All_Users -- All Users in Employee Active Directory",
+          "[ACCESS_PROFILE] Employee Base Account - AD -- Base Active Directory account for all active employees",
+          "[ACCESS_PROFILE] Payroll Admin Access - AD -- Internal Payroll Admin Application Access"
+        ]
+      },
+      "PRISM": {
+        "count": 9,
+        "items": [
+          "[ENTITLEMENT] View_Reports -- View-only access to all existing Accounting report data",
+          "[ENTITLEMENT] Modify_Reports -- View and Modify existing Accounting report runs",
+          "[ENTITLEMENT] Create_Reports -- View, Modify and Create Accounting report runs",
+          "[ENTITLEMENT] Internal_Employee -- Access to internal-use-only systems",
+          "[ENTITLEMENT] Manager -- This group is used to assign manager access to PRISM",
+          "[ENTITLEMENT] User -- This group is used to assign basic user access to PRISM",
+          "[ACCESS_PROFILE] ERP Employee Access - PRISM -- Grants user access to the PRISM ERP system",
+          "[ACCESS_PROFILE] ERP Report Admin - PRISM -- Grants report administrator access to the PRISM ERP system.",
+          "[ACCESS_PROFILE] ERP User Access - PRISM -- Grants user access to the PRISM ERP system"
+        ]
+      }
+    },
+    "privileged": [],
+    "direct_entitlements": 8,
+    "entitlements_via_bundles": 9
+  },
+  "notes": []
+}

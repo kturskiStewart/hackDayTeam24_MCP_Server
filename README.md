@@ -4,10 +4,30 @@ An MCP (Model Context Protocol) server that gives an AI assistant real access to
 your SailPoint Identity Security Cloud tenant, via the
 [SailPoint Python SDK](https://github.com/sailpoint-oss/python-sdk).
 
-Authentication, token refresh, error handling, and tool registration are already
-done. Your job for the Hackathon is to write tools.
+Built for SailPoint Hack Day on top of the
+[python-mcp-server-template](https://github.com/sailpoint-oss/python-mcp-server-template).
+It answers three questions that people otherwise have to click through the UI (or
+ask IT) to get, and turns each answer into a report you can hand to someone:
 
-Ships with one working tool, `search_identities`, as a reference implementation.
+1. **"What access does this person have?"** A single-person access review with a
+   CSV export, for executives and auditors.
+2. **"Is my access request stuck, and who is holding it up?"** Request status for
+   people who can't see the ticket, plus a sheet of what's pending and approved.
+3. **"Which terminated users still have live access?"** A leaver audit for
+   security managers.
+
+See **[docs/use-cases.md](docs/use-cases.md)** for the problem, flow and real
+captured output for each one, and **[docs/demo-script.md](docs/demo-script.md)**
+for a five-minute live demo.
+
+| Tool | Use case |
+| --- | --- |
+| `search_identities` | Find people (reference tool) |
+| `analyze_identity_access` | Executive access review: full access picture + CSV export |
+| `get_access_request_status` | Is my access request pending, approved or stuck? |
+| `get_approvals` | What is waiting on this approver? |
+| `audit_terminated_access` | Which terminated people still have enabled accounts? CSV + HTML report |
+| `export_access_request_report` | A shareable sheet (CSV + HTML) of pending and approved requests, with who approves |
 
 ```
 You:  Tell me more about the identity Tyler Mairose.
@@ -53,7 +73,7 @@ uv pip install -e ".[dev]"
 Your `.env`:
 
 ```bash
-SAIL_BASE_URL=https://your-tenant.api.identitynow.com
+SAIL_BASE_URL=https://devrel-ga-25038.api.identitynow-demo.com
 SAIL_CLIENT_ID=...
 SAIL_CLIENT_SECRET=...
 ```
@@ -199,8 +219,14 @@ src/sailpoint_mcp/
 └── tools/
     ├── __init__.py           # auto-discovers every tool module
     ├── search_identities.py  # the reference tool -- read this first
+    ├── analyze_identity_access.py  # use case 1: access review + CSV
+    ├── access_requests.py    # use case 2: request status + approvals
+    ├── access_request_report.py  # use case 2: the shareable sheet
+    ├── terminated_access_audit.py  # use case 3: leavers with live accounts
     └── _template.py          # copy this to start your own
 scripts/check_auth.py         # credential + connectivity smoke test
+scripts/generate_examples.py  # re-captures docs/examples from the live tenant
+docs/                         # use cases and captured evidence
 tests/                        # pytest, no tenant required
 ```
 
@@ -244,6 +270,9 @@ and need no tenant or credentials.
 | 403 on a specific API | Your PAT's identity lacks the user level or scope that API needs. |
 | Server missing in the client | Path in the MCP config isn't absolute, or the client wasn't restarted. |
 | Tool not appearing | Module name starts with `_`, or it has no `register(mcp)`. Check stderr. |
+| `CERTIFICATE_VERIFY_FAILED ... key usage extension` | Netskope TLS inspection with Python 3.13. Handled in `sailpoint_mcp/__init__.py` (uses the OS trust store, drops `VERIFY_X509_STRICT`); make sure `truststore` is installed. |
+| `Expecting value: line 1 column 1` fetching a token | `SAIL_BASE_URL` is the UI host. It needs `.api.` in it: `https://<tenant>.api.identitynow-demo.com`. |
+| `pip install` fails with "file in use" on Windows | Two installs running at once. Run one at a time. |
 | Garbled protocol / client won't connect | Something printed to **stdout**. Logs must go to stderr; use `log.info`, never `print`. |
 
 Verbose logging: `SAILPOINT_MCP_LOG_LEVEL=DEBUG`.

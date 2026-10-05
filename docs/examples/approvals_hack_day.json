@@ -1,0 +1,24 @@
+{
+  "approver_id": "09f88cff98014048bef4d704186a7e64",
+  "pending_count": 0,
+  "pending": [],
+  "days": 30,
+  "completed_count": 1,
+  "completed": [
+    {
+      "approval_id": "55633b9e5a4e49df887c42174aa3bfe9",
+      "item": "HACK DAY - Role with Approver",
+      "item_type": "ROLE",
+      "request_type": "GRANT_ACCESS",
+      "requested_for": "Adam.Kennedy",
+      "requested_by": "hack.day",
+      "decision": "APPROVED",
+      "decided_by": "hack.day",
+      "requester_comment": "Hack day test: pending approval path for get_approvals",
+      "reviewer_comment": "Hack Day",
+      "requested_on": "2026-10-05T18:08:39.561000+00:00",
+      "decided_on": "2026-10-05T18:44:04.257000+00:00"
+    }
+  ],
+  "note": "Nothing is waiting on this approver."
+}

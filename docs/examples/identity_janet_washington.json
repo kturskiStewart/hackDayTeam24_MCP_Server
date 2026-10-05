@@ -1,0 +1,26 @@
+{
+  "id": "a3d26967fab94e63b6637358bc54877b",
+  "name": "Janet.Washington",
+  "username": "Janet.Washington",
+  "email": "Janet.Washington@sailpointdemo.com",
+  "job_title": "Payroll Manager",
+  "department": "Accounting",
+  "manager": "Amanda.Ross",
+  "lifecycle_state": "active",
+  "is_manager": true,
+  "inactive": false,
+  "authoritative_source": "HR",
+  "account_sources": [
+    "Active Directory",
+    "HR",
+    "IdentityNow",
+    "PRISM"
+  ],
+  "access_counts": {
+    "total_access": 22,
+    "entitlements": 17,
+    "roles": 0,
+    "access_profiles": 5
+  },
+  "created": "2026-09-21T13:07:53.167Z"
+}

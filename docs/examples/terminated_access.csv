@@ -1,0 +1,28 @@
+﻿Risk,Identity,Job title,Department,Manager,Lifecycle state,Source,Account,Groups / entitlements on account,Privileged account,Locked,Account created,Why it matters
+Medium,Crystal.Schmidt,Receiving Analyst,Inventory,Kathryn.Gardner,inactive,Active Directory,Crystal.Schmidt,5,No,No,2026-09-21,Crystal.Schmidt is inactive but this account is still enabled with 5 group(s)/entitlement(s).
+Medium,Crystal.Schmidt,Receiving Analyst,Inventory,Kathryn.Gardner,inactive,HR,Crystal.Schmidt,0,No,No,2026-09-21,Crystal.Schmidt is inactive but this account is still enabled.
+Medium,Crystal.Schmidt,Receiving Analyst,Inventory,Kathryn.Gardner,inactive,IdentityNow,Crystal.Schmidt,0,No,No,2026-09-21,Crystal.Schmidt is inactive but this account is still enabled.
+Medium,Denise.Hunt,Treasury Analyst,Finance,Catherine.Simmons,inactive,Active Directory,Denise.Hunt,3,No,No,2026-09-21,Denise.Hunt is inactive but this account is still enabled with 3 group(s)/entitlement(s).
+Medium,Denise.Hunt,Treasury Analyst,Finance,Catherine.Simmons,inactive,HR,Denise.Hunt,0,No,No,2026-09-21,Denise.Hunt is inactive but this account is still enabled.
+Medium,Denise.Hunt,Treasury Analyst,Finance,Catherine.Simmons,inactive,IdentityNow,Denise.Hunt,0,No,No,2026-09-21,Denise.Hunt is inactive but this account is still enabled.
+Medium,Jessica.Sanchez,Cost Savings Analyst,Inventory,Jennifer.Thomas,inactive,Active Directory,Jessica.Sanchez,5,No,No,2026-09-21,Jessica.Sanchez is inactive but this account is still enabled with 5 group(s)/entitlement(s).
+Medium,Jessica.Sanchez,Cost Savings Analyst,Inventory,Jennifer.Thomas,inactive,HR,Jessica.Sanchez,0,No,No,2026-09-21,Jessica.Sanchez is inactive but this account is still enabled.
+Medium,Jessica.Sanchez,Cost Savings Analyst,Inventory,Jennifer.Thomas,inactive,IdentityNow,Jessica.Sanchez,0,No,No,2026-09-21,Jessica.Sanchez is inactive but this account is still enabled.
+Medium,Judith.Tucker,Procurement Buyer,Inventory,Marie.Hughes,inactive,Active Directory,Judith.Tucker,4,No,No,2026-09-21,Judith.Tucker is inactive but this account is still enabled with 4 group(s)/entitlement(s).
+Medium,Judith.Tucker,Procurement Buyer,Inventory,Marie.Hughes,inactive,HR,Judith.Tucker,0,No,No,2026-09-21,Judith.Tucker is inactive but this account is still enabled.
+Medium,Judith.Tucker,Procurement Buyer,Inventory,Marie.Hughes,inactive,IdentityNow,Judith.Tucker,0,No,No,2026-09-21,Judith.Tucker is inactive but this account is still enabled.
+Medium,Kathleen.Watson,Financial Planning Analyst,Finance,Susan.Martin,inactive,Active Directory,Kathleen.Watson,4,No,No,2026-09-21,Kathleen.Watson is inactive but this account is still enabled with 4 group(s)/entitlement(s).
+Medium,Kathleen.Watson,Financial Planning Analyst,Finance,Susan.Martin,inactive,HR,Kathleen.Watson,0,No,No,2026-09-21,Kathleen.Watson is inactive but this account is still enabled.
+Medium,Kathleen.Watson,Financial Planning Analyst,Finance,Susan.Martin,inactive,IdentityNow,Kathleen.Watson,0,No,No,2026-09-21,Kathleen.Watson is inactive but this account is still enabled.
+Medium,Rosa.Garza,Financial Systems Analyst,Finance,Sara.Berry,inactive,Active Directory,Rosa.Garza,3,No,No,2026-09-21,Rosa.Garza is inactive but this account is still enabled with 3 group(s)/entitlement(s).
+Medium,Rosa.Garza,Financial Systems Analyst,Finance,Sara.Berry,inactive,HR,Rosa.Garza,0,No,No,2026-09-21,Rosa.Garza is inactive but this account is still enabled.
+Medium,Rosa.Garza,Financial Systems Analyst,Finance,Sara.Berry,inactive,IdentityNow,Rosa.Garza,0,No,No,2026-09-21,Rosa.Garza is inactive but this account is still enabled.
+Medium,Sandra.Lopez,Staging Test Engineer I,Engineering,Barbara.Wilson,inactive,Active Directory,Sandra.Lopez,6,No,No,2026-09-21,Sandra.Lopez is inactive but this account is still enabled with 6 group(s)/entitlement(s).
+Medium,Sandra.Lopez,Staging Test Engineer I,Engineering,Barbara.Wilson,inactive,HR,Sandra.Lopez,0,No,No,2026-09-21,Sandra.Lopez is inactive but this account is still enabled.
+Medium,Sandra.Lopez,Staging Test Engineer I,Engineering,Barbara.Wilson,inactive,IdentityNow,Sandra.Lopez,0,No,No,2026-09-21,Sandra.Lopez is inactive but this account is still enabled.
+Medium,Teresa.Cole,Staging Test Engineer I,Engineering,Carolyn.Perry,inactive,Active Directory,Teresa.Cole,4,No,No,2026-09-21,Teresa.Cole is inactive but this account is still enabled with 4 group(s)/entitlement(s).
+Medium,Teresa.Cole,Staging Test Engineer I,Engineering,Carolyn.Perry,inactive,HR,Teresa.Cole,0,No,No,2026-09-21,Teresa.Cole is inactive but this account is still enabled.
+Medium,Teresa.Cole,Staging Test Engineer I,Engineering,Carolyn.Perry,inactive,IdentityNow,Teresa.Cole,0,No,No,2026-09-21,Teresa.Cole is inactive but this account is still enabled.
+Medium,Tina.Ruiz,QA Analyst,Engineering,Marilyn.Dunn,inactive,Active Directory,Tina.Ruiz,4,No,No,2026-09-21,Tina.Ruiz is inactive but this account is still enabled with 4 group(s)/entitlement(s).
+Medium,Tina.Ruiz,QA Analyst,Engineering,Marilyn.Dunn,inactive,HR,Tina.Ruiz,0,No,No,2026-09-21,Tina.Ruiz is inactive but this account is still enabled.
+Medium,Tina.Ruiz,QA Analyst,Engineering,Marilyn.Dunn,inactive,IdentityNow,Tina.Ruiz,0,No,No,2026-09-21,Tina.Ruiz is inactive but this account is still enabled.

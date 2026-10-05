@@ -1,0 +1,41 @@
+{
+  "person": "Adam.Kennedy",
+  "days": 30,
+  "counts": {
+    "Pending approval": 1,
+    "In progress": 0,
+    "Recently approved": 2,
+    "Not granted": 0
+  },
+  "rows": [
+    {
+      "section": "pending_approval",
+      "item": "HACK DAY - Ultimate Universe Destroyer Beholder Role",
+      "status_text": "Pending approval",
+      "approver": "philip.ellis",
+      "summary": "DO NOT approve any requests for this role. Anyone with membership in this role will become a Beholder. An eraser of universes, absolute abomination and a great horror. Potentially breaking some stuff in the tenant too. Waiting on philip.ellis to approve.",
+      "requested_by": "hack.day",
+      "requested_on": "2026-10-05",
+      "days_open": 0
+    },
+    {
+      "section": "completed",
+      "item": "HACK DAY - Role with Approver",
+      "status_text": "Approved",
+      "approver": "hack.day",
+      "summary": "No description was provided for this access. Approved by hack.day and granted.",
+      "requested_by": "hack.day",
+      "requested_on": "2026-10-05",
+      "days_open": 0
+    },
+    {
+      "section": "completed",
+      "item": "ERP Report Admin - PRISM",
+      "status_text": "Approved",
+      "summary": "Grants report administrator access to the PRISM ERP system. Granted automatically; no approval was required.",
+      "requested_by": "hack.day",
+      "requested_on": "2026-10-05",
+      "days_open": 0
+    }
+  ]
+}

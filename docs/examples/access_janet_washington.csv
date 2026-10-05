@@ -1,0 +1,27 @@
+﻿identity,access_type,name,source,description,attribute,value,privileged,owner,requestable,assignment,granted_via,id
+Janet.Washington,ENTITLEMENT,PayrollProjects,Active Directory,Payroll Projects Base-level Access,memberOf,"CN=PayrollProjects,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Payroll Admin Access - AD,ef3e58c2094535c3b49d014c8c525e26
+Janet.Washington,ENTITLEMENT,FinanceUsers,Active Directory,Grants basic financial access to the internal Financial System,memberOf,"CN=FinanceUsers,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,a22f52646fde333fa969f3f1d193ad12
+Janet.Washington,ENTITLEMENT,InternalAudit,Active Directory,Internal Audit Accounting Systems Access,memberOf,"CN=InternalAudit,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,08cdd3757801378a9464f34c1e371710
+Janet.Washington,ENTITLEMENT,AI_Payment_Members,Active Directory,Security group containing all AI Payment application members.,memberOf,"CN=AI_Payment_Members,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,462c11d07264389898183c301063f78b
+Janet.Washington,ENTITLEMENT,PayrollControls,Active Directory,Payroll Controls Base-level Access,memberOf,"CN=PayrollControls,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Payroll Admin Access - AD,017a387f1a42385389d86f9d2b545eec
+Janet.Washington,ENTITLEMENT,PayrollAnalysis,Active Directory,Grants abilities to view payroll analytics and trends,memberOf,"CN=PayrollAnalysis,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,985ae68c7efe3e7cabbed3fd8765705a
+Janet.Washington,ENTITLEMENT,WindowsAdministration,Active Directory,Windows Administration System-Wide Accessve Directory,memberOf,"CN=WindowsAdministration,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,ba59d370d7c737598a87c5198c9f75b4
+Janet.Washington,ENTITLEMENT,campusAccess,Active Directory,Controls physical badge access to company HQ buildings,memberOf,"CN=campusAccess,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Employee Base Account - AD,55a0ac080b6d3c3182bad832f7dc3c88
+Janet.Washington,ENTITLEMENT,PayrollManager,Active Directory,Grants access to employee management tools for Payroll department and web access to Payroll Training and Compliance database,memberOf,"CN=PayrollManager,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,11dbf9151cce3f76b155a61e2baed3ca
+Janet.Washington,ENTITLEMENT,Employees,Active Directory,Employees,memberOf,"CN=Employees,OU=BirthRight,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,7fe9339911423517a094cff5e795a9bc
+Janet.Washington,ENTITLEMENT,All_Users,Active Directory,All Users in Employee Active Directory,memberOf,"CN=All_Users,OU=BirthRight,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Employee Base Account - AD,8666a18236d334c483370a3f3f3932ad
+Janet.Washington,ENTITLEMENT,View_Reports,PRISM,View-only access to all existing Accounting report data,groups,View_Reports,False,,False,via bundle,ERP Employee Access - PRISM; ERP Report Admin - PRISM,ac4155d329d2315f8318e24543d1723a
+Janet.Washington,ENTITLEMENT,Modify_Reports,PRISM,View and Modify existing Accounting report runs,groups,Modify_Reports,False,,False,via bundle,ERP Report Admin - PRISM,4bf3401bb1333a58bae6e9d2f1e957b7
+Janet.Washington,ENTITLEMENT,Create_Reports,PRISM,"View, Modify and Create Accounting report runs",groups,Create_Reports,False,,False,via bundle,ERP Report Admin - PRISM,ec80d14ea70f300889f1be4a8bff9a8f
+Janet.Washington,ENTITLEMENT,Internal_Employee,PRISM,Access to internal-use-only systems,groups,Internal_Employee,False,,False,via bundle,ERP Employee Access - PRISM,c96d414c0f643473bdf3071594fdea1c
+Janet.Washington,ENTITLEMENT,Manager,PRISM,This group is used to assign manager access to PRISM,groups,Manager,False,,False,direct,,fe02a120e8a9379b9eb981c39552ebb4
+Janet.Washington,ENTITLEMENT,User,PRISM,This group is used to assign basic user access to PRISM,groups,User,False,,False,via bundle,ERP Employee Access - PRISM; ERP User Access - PRISM,c6bb76e8c70837069c9c31abf1703c69
+Janet.Washington,ACCESS_PROFILE,Employee Base Account - AD,Active Directory,Base Active Directory account for all active employees,,,,,,,,8104cb70dd4140d4abdfe08518958ed2
+Janet.Washington,ACCESS_PROFILE,ERP Employee Access - PRISM,PRISM,Grants user access to the PRISM ERP system,,,,,,,,7cff027773b6499aa947c038d8f638ed
+Janet.Washington,ACCESS_PROFILE,ERP Report Admin - PRISM,PRISM,Grants report administrator access to the PRISM ERP system.,,,,,,,,8ee584cf43084287a3dc7d4042a8cfca
+Janet.Washington,ACCESS_PROFILE,Payroll Admin Access - AD,Active Directory,Internal Payroll Admin Application Access,,,,,,,,51db9f58018b4889a85d5b5c4009d5f5
+Janet.Washington,ACCESS_PROFILE,ERP User Access - PRISM,PRISM,Grants user access to the PRISM ERP system,,,,,,,,4556813fdd214cb7966b0eb1fdb89c97
+Janet.Washington,ACCOUNT,Janet.Washington,HR,enabled,,,False,,,,,64c021508e474c5bb4851d810920f686
+Janet.Washington,ACCOUNT,Janet.Washington,Active Directory,enabled,,,False,,,,,719fd37c220449619d87e65642274c79
+Janet.Washington,ACCOUNT,Janet.Washington,PRISM,enabled,,,False,,,,,897a7b9e21ea465f83323f543479a873
+Janet.Washington,ACCOUNT,Janet.Washington,IdentityNow,enabled,,,False,,,,,95bdf4a4a6904cd9937bf7408e575c0b

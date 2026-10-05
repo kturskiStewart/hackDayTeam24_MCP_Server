@@ -1,0 +1,20 @@
+﻿identity,access_type,name,source,description,attribute,value,privileged,owner,requestable,assignment,granted_via,id
+Adam.Kennedy,ENTITLEMENT,Contract_Employee,PRISM,Access to external-use systems,groups,Contract_Employee,False,,False,direct,,9199ba4a7a7b32d59a74c54273fed548
+Adam.Kennedy,ENTITLEMENT,Internal_Employee,PRISM,Access to internal-use-only systems,groups,Internal_Employee,False,,False,via bundle,ERP Employee Access - PRISM,c96d414c0f643473bdf3071594fdea1c
+Adam.Kennedy,ENTITLEMENT,Create_Reports,PRISM,"View, Modify and Create Accounting report runs",groups,Create_Reports,False,,False,via bundle,ERP Report Admin - PRISM,ec80d14ea70f300889f1be4a8bff9a8f
+Adam.Kennedy,ENTITLEMENT,User,PRISM,This group is used to assign basic user access to PRISM,groups,User,False,,False,via bundle,ERP Employee Access - PRISM; ERP User Access - PRISM,c6bb76e8c70837069c9c31abf1703c69
+Adam.Kennedy,ENTITLEMENT,View_Reports,PRISM,View-only access to all existing Accounting report data,groups,View_Reports,False,,False,via bundle,ERP Employee Access - PRISM; ERP Report Admin - PRISM,ac4155d329d2315f8318e24543d1723a
+Adam.Kennedy,ENTITLEMENT,Modify_Reports,PRISM,View and Modify existing Accounting report runs,groups,Modify_Reports,False,,False,via bundle,ERP Report Admin - PRISM,4bf3401bb1333a58bae6e9d2f1e957b7
+Adam.Kennedy,ENTITLEMENT,InvntryAnalysis,Active Directory,Inventory Analysis,memberOf,"CN=InvntryAnalysis,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,3c369856fb833a32838bba43c31ad527
+Adam.Kennedy,ENTITLEMENT,campusAccess,Active Directory,Controls physical badge access to company HQ buildings,memberOf,"CN=campusAccess,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Employee Base Account - AD,55a0ac080b6d3c3182bad832f7dc3c88
+Adam.Kennedy,ENTITLEMENT,Employees,Active Directory,Employees,memberOf,"CN=Employees,OU=BirthRight,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,direct,,7fe9339911423517a094cff5e795a9bc
+Adam.Kennedy,ENTITLEMENT,All_Users,Active Directory,All Users in Employee Active Directory,memberOf,"CN=All_Users,OU=BirthRight,OU=Groups,OU=Demo,DC=seri,DC=sailpointdemo,DC=com",False,,False,via bundle,Employee Base Account - AD,8666a18236d334c483370a3f3f3932ad
+Adam.Kennedy,ROLE,HACK DAY - Role with Approver,,,,,,hack.day,,,,aeccdad3d28b42b0b9000df006c05871
+Adam.Kennedy,ACCESS_PROFILE,Employee Base Account - AD,Active Directory,Base Active Directory account for all active employees,,,,,,,,8104cb70dd4140d4abdfe08518958ed2
+Adam.Kennedy,ACCESS_PROFILE,ERP Employee Access - PRISM,PRISM,Grants user access to the PRISM ERP system,,,,,,,,7cff027773b6499aa947c038d8f638ed
+Adam.Kennedy,ACCESS_PROFILE,ERP Report Admin - PRISM,PRISM,Grants report administrator access to the PRISM ERP system.,,,,,,,,8ee584cf43084287a3dc7d4042a8cfca
+Adam.Kennedy,ACCESS_PROFILE,ERP User Access - PRISM,PRISM,Grants user access to the PRISM ERP system,,,,,,,,4556813fdd214cb7966b0eb1fdb89c97
+Adam.Kennedy,ACCOUNT,Adam.Kennedy,HR,enabled,,,False,,,,,30405e3261444da7baeeaeafea1c7ad4
+Adam.Kennedy,ACCOUNT,Adam.Kennedy,PRISM,enabled,,,False,,,,,4b2f13183ea14e9aae4dada49d7df73b
+Adam.Kennedy,ACCOUNT,Adam.Kennedy,Active Directory,enabled,,,False,,,,,b9c1bf8cec8a4cbe9f780adaa9980635
+Adam.Kennedy,ACCOUNT,Adam.Kennedy,IdentityNow,enabled,,,False,,,,,9361d2b1291d4288b81f67a7f6d2b1ab

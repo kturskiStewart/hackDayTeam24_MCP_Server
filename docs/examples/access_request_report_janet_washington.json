@@ -1,0 +1,11 @@
+{
+  "person": "a3d26967fab94e63b6637358bc54877b",
+  "days": 30,
+  "counts": {
+    "Pending approval": 0,
+    "In progress": 0,
+    "Recently approved": 0,
+    "Not granted": 0
+  },
+  "rows": []
+}

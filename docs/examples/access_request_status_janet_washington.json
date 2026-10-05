@@ -1,0 +1,9 @@
+{
+  "identity_id": "a3d26967fab94e63b6637358bc54877b",
+  "direction": "either",
+  "days": 30,
+  "returned": 0,
+  "counts_by_status": {},
+  "requests": [],
+  "note": "No matching access requests in the last 30 days."
+}
