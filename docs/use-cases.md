@@ -50,12 +50,12 @@ and summarizes it for a non-technical reader.
 | --- | --- |
 | [identity_adam_kennedy.json](examples/identity_adam_kennedy.json) | Step 1: the search result the user picks from |
 | [analyze_identity_access_adam_kennedy.json](examples/analyze_identity_access_adam_kennedy.json) | Step 2: the digest the assistant summarizes |
-| [access_adam_kennedy.csv](examples/access_adam_kennedy.csv) | The exported raw data (18 rows) |
+| [access_adam_kennedy.csv](examples/access_adam_kennedy.csv) | The exported raw data (19 rows) |
 | [access_janet_washington.csv](examples/access_janet_washington.csv) | A manager with more access (26 rows) |
 
-Adam Kennedy (Payroll Analyst II, Accounting): 10 entitlements, 4 access profiles
-and 4 accounts across PRISM and Active Directory; 7 of the entitlements come
-through access profiles and 3 were assigned directly. Each CSV row records the
+Adam Kennedy (Payroll Analyst II, Accounting): 10 entitlements, 4 access profiles,
+1 role and 4 accounts across PRISM and Active Directory; 7 of the entitlements
+come through access profiles and 3 were assigned directly. Each CSV row records the
 type, source, description, whether it is privileged, who owns it, and which
 bundle granted it.
 
@@ -63,8 +63,9 @@ bundle granted it.
 
 - The summary is written by the assistant from the digest; the server has no
   model of its own. Quality depends on the client model.
-- The demo tenant has no roles assigned to anyone, so role expansion has never
-  run against real data (it is wrapped so a failure only adds a note).
+- The only role in the demo data (`HACK DAY - Role with Approver`) contains no
+  access profiles or entitlements, so expanding a role into what it grants has
+  not been exercised with real content (a failure only adds a note).
 - Owner and privileged columns are empty/false throughout the demo data, so
   privileged-access flagging is untested on real positives.
 - At most 40 roles/access profiles are expanded per identity, to bound the number
@@ -120,7 +121,7 @@ request record has no name for "all owners" approval schemes.
 | [access_requests_adam_kennedy.html](examples/access_requests_adam_kennedy.html) | The end-user sheet (open in a browser, or print) |
 | [access_requests_adam_kennedy.csv](examples/access_requests_adam_kennedy.csv) | The same sheet for Excel |
 | [access_request_report_adam_kennedy.json](examples/access_request_report_adam_kennedy.json) | What the tool returns to the assistant |
-| [access_request_status_adam_kennedy.json](examples/access_request_status_adam_kennedy.json) | Chat view: two pending requests and one completed |
+| [access_request_status_adam_kennedy.json](examples/access_request_status_adam_kennedy.json) | Chat view: one pending request (the Beholder role) and two completed |
 | [approvals_adam_kennedy.json](examples/approvals_adam_kennedy.json) | Approver view for Adam himself (empty: he approves nothing) |
 
 **Demo data in the tenant.** Three requests were submitted for Adam Kennedy by the

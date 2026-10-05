@@ -30,13 +30,13 @@ for a five-minute live demo.
 | `export_access_request_report` | A shareable sheet (CSV + HTML) of pending and approved requests, with who approves |
 
 ```
-You:  Tell me more about the identity Tyler Mairose.
+You:  How many terminated users still have active access?
 
-      → search_identities(query="Tyler Mairose")
+      → audit_terminated_access()
 
-Claude: Tyler Mairose is a Developer Tools Lead in Developer Relations,
-        reporting to Ada Lovelace. Active lifecycle state, accounts on
-        Active Directory and Workday, 42 access items total.
+Claude: 9 terminated identities, and all 9 still have at least one enabled
+        account (27 accounts in total, mostly Active Directory). The report
+        is saved as HTML and CSV.
 ```
 
 ---
@@ -50,8 +50,10 @@ New Token**. Copy the client ID and secret — the secret is shown only once.
 
 ### 2. Set up the project
 
+macOS / Linux:
+
 ```bash
-git clone <this-repo> && cd python-mcp-server
+git clone <this-repo> && cd <repo-folder>
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -59,6 +61,18 @@ pip install -e ".[dev]"
 
 cp .env.example .env   # then fill in your three values
 chmod 600 .env
+```
+
+Windows (PowerShell):
+
+```powershell
+git clone <this-repo>; cd <repo-folder>
+
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -e ".[dev]"    # run one install at a time; see Troubleshooting
+
+Copy-Item .env.example .env   # then fill in your three values
 ```
 
 <details>
@@ -101,8 +115,12 @@ are readable.
 **Claude Code** — from the project directory:
 
 ```bash
-claude mcp add sailpoint -- /full/path/to/python-mcp-server/.venv/bin/python -m sailpoint_mcp
+claude mcp add sailpoint -- /full/path/to/repo/.venv/bin/python -m sailpoint_mcp
 ```
+
+On Windows the interpreter is `C:\full\path\to\repo\.venv\Scripts\python.exe`. You
+can also put the same `command` / `args` in a project `.mcp.json` (gitignored here,
+because it contains your local path).
 
 **Claude Desktop / Cursor / other clients** — add to the MCP config file
 (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
@@ -111,7 +129,7 @@ claude mcp add sailpoint -- /full/path/to/python-mcp-server/.venv/bin/python -m 
 {
   "mcpServers": {
     "sailpoint": {
-      "command": "/full/path/to/python-mcp-server/.venv/bin/python",
+      "command": "/full/path/to/repo/.venv/bin/python",
       "args": ["-m", "sailpoint_mcp"]
     }
   }
