@@ -1,33 +1,40 @@
 # SailPoint MCP Server
 
+**Ask your SailPoint tenant a question in plain English and get back a report you
+can hand to someone.**
+
 An MCP (Model Context Protocol) server that gives an AI assistant real access to
 your SailPoint Identity Security Cloud tenant, via the
-[SailPoint Python SDK](https://github.com/sailpoint-oss/python-sdk).
-
-Built for SailPoint Hack Day on top of the
+[SailPoint Python SDK](https://github.com/sailpoint-oss/python-sdk). Built for
+SailPoint Hack Day on top of the
 [python-mcp-server-template](https://github.com/sailpoint-oss/python-mcp-server-template).
-It answers three questions that people otherwise have to click through the UI (or
-ask IT) to get, and turns each answer into a report you can hand to someone:
 
-1. **"What access does this person have?"** A single-person access review with a
-   CSV export, for executives and auditors.
-2. **"Is my access request stuck, and who is holding it up?"** Request status for
-   people who can't see the ticket, plus a sheet of what's pending and approved.
-3. **"Which terminated users still have live access?"** A leaver audit for
-   security managers.
+## Identity questions that normally need an expert
+
+Some questions are easy to ask and slow to answer: they need someone who knows
+where to click, or an IT ticket. Each of these now takes one sentence, and ends
+with a file you can send:
+
+| Ask | Who asks it | You get |
+| --- | --- | --- |
+| **"Is my access request stuck, and who is holding it up?"** | Employees and managers, who can't see the ticket | A sheet of what's pending and approved, in plain English, with who needs to approve |
+| **"Which terminated users still have live access?"** | Security managers, auditors | Headline numbers plus a report of every enabled account |
+| **"What access does this person have?"** | Executives, auditors | A plain-language summary plus a CSV of the evidence |
 
 See **[docs/use-cases.md](docs/use-cases.md)** for the problem, flow and real
 captured output for each one, and **[docs/demo-script.md](docs/demo-script.md)**
 for a five-minute live demo.
 
+## Tools
+
 | Tool | Use case |
 | --- | --- |
 | `search_identities` | Find people (reference tool) |
-| `analyze_identity_access` | Executive access review: full access picture + CSV export |
 | `get_access_request_status` | Is my access request pending, approved or stuck? |
 | `get_approvals` | What is waiting on this approver? |
-| `audit_terminated_access` | Which terminated people still have enabled accounts? CSV + HTML report |
 | `export_access_request_report` | A shareable sheet (CSV + HTML) of pending and approved requests, with who approves |
+| `audit_terminated_access` | Which terminated people still have enabled accounts? CSV + HTML report |
+| `analyze_identity_access` | Executive access review: full access picture + CSV export |
 
 ```
 You:  How many terminated users still have active access?
